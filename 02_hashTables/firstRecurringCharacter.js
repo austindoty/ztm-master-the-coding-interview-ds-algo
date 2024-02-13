@@ -23,10 +23,11 @@ function firstRecurringCharacter(input) {
   function firstRecurringCharacter2(input) {
     let map = {};
     for (let i = 0; i < input.length; i++) {
-      if (map[input[i]] !== undefined) {
-        return input[i]
+      let data = input[i]
+      if (map[data] !== undefined) {
+        return data
       } else {
-        map[input[i]] = i;
+        map[data] = i;
       }
     }
     return undefined
